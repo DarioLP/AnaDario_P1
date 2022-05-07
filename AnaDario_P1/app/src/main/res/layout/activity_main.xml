@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/txtSede"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Sede" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/txtSede"
+                    android:entries="@array/sede" />
+
+                <TextView
+                    android:id="@+id/txtEsta"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSede"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Estado de Empleo" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSede"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/txtEsta">
+
+                    <RadioButton
+                        android:id="@+id/rbOcupado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ocupado" />
+
+                    <RadioButton
+                        android:id="@+id/rbEmpleado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Empleado" />
+
+                    <RadioButton
+                        android:id="@+id/rbIndependiente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Independiente" />
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/txtGradoEstudio"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:text="Grado de Estudio" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_toEndOf="@+id/txtGradoEstudio"
+                    android:entries="@array/gradoEstudio" />
+
+                <TextView
+                    android:id="@+id/txtIdioma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtGradoEstudio"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Idioma que domina" />
+
+
+                <TextView
+                    android:id="@+id/txtES"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtIdioma"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Español" />
+
+                <Spinner
+                    android:id="@+id/spEspanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtIdioma"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/txtES"
+                    android:entries="@array/idioma" />
+
+                <TextView
+                    android:id="@+id/txtIN"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtES"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Ingles" />
+
+                <Spinner
+                    android:id="@+id/spIngles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtES"
+                    android:layout_toEndOf="@+id/txtIN"
+                    android:entries="@array/idioma" />
+
+                <TextView
+                    android:id="@+id/txtAreaInteres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtIN"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Areas de interes" />
+
+                <CheckBox
+                    android:id="@+id/chRedes"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAreaInteres"
+                    android:layout_alignParentStart="true"
+                    android:text="Redes" />
+
+                <CheckBox
+                    android:id="@+id/chSoftware"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAreaInteres"
+                    android:layout_toEndOf="@+id/chRedes"
+                    android:text="Software" />
+
+                <CheckBox
+                    android:id="@+id/chArquitectura"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chRedes"
+                    android:text="Arquitectura" />
+
+                <CheckBox
+                    android:id="@+id/chInformatica"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chSoftware"
+                    android:layout_toEndOf="@+id/chArquitectura"
+                    android:text="Informatica Educativa" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chInformatica"
+                    android:layout_centerHorizontal="true"
+                    android:text="Procesar" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
