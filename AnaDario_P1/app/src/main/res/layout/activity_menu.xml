@@ -12,47 +12,69 @@
         android:scaleType="centerCrop"
         android:src="@drawable/imgbackground"
         android:tint="#4D000000" />
-    <TextView
-        android:id="@+id/txtMenuTittle"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Sistema de Senso Universitario"
-        android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:layout_marginTop="120dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="#EBF8FF"/>
 
-    <Button
-        android:id="@+id/btnFormulario"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtMenuTittle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="Formulario"
-        android:onClick="OnclickButtons"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnResultado"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Resultados"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnFormulario"
-        android:layout_marginTop="25dp"
-        android:onClick="OnclickButtons"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Salir"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnResultado"
-        android:layout_marginTop="25dp"
-        android:onClick="OnclickButtons"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtMenuTittle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sistema de Senso Universitario"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:layout_marginTop="120dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#EBF8FF"/>
+
+                <Button
+                    android:id="@+id/btnFormulario"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtMenuTittle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:text="Formulario"
+                    android:onClick="OnclickButtons"/>
+
+                <Button
+                    android:id="@+id/btnResultado"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Resultados"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/btnFormulario"
+                    android:layout_marginTop="25dp"
+                    android:onClick="OnclickButtons"
+                    />
+
+                <Button
+                    android:id="@+id/btnSalir"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Salir"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/btnResultado"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:onClick="OnclickButtons"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </RelativeLayout>

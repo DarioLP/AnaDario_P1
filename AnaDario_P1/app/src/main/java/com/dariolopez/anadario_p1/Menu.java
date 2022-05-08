@@ -1,7 +1,9 @@
 package com.dariolopez.anadario_p1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -31,14 +33,35 @@ public class Menu extends AppCompatActivity {
                 this.finish();
                 break;
             case R.id.btnSalir:
-                finish();
+                
+                exitApp();
+
                 break;
         }
 
 
     }
 
-    public void exitApp(View view){
-        finish();
+    public void exitApp(){ // Alerta que pregunta si deseamos salir o no
+
+        AlertDialog.Builder exit = new AlertDialog.Builder(Menu.this);
+        exit.setMessage("Desea Salir de la Aplicación?")
+                .setCancelable(false)
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog titulo= exit.create();
+                titulo.setTitle("Salir");
+                titulo.show();
+
     }
 }
