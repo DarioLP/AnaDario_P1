@@ -2,6 +2,7 @@ package com.dariolopez.anadario_p1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -65,7 +66,11 @@ private void SpinnerSede(){
 
 
 
-
+public void exitMenu(View view){
+    Intent goMenu = new Intent(MainActivity.this,Menu.class);
+    startActivity(goMenu);
+    this.finish();
+}
 
 
 

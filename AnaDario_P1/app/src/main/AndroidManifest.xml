@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnaDario_P1">
         <activity
+            android:name=".Result"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
