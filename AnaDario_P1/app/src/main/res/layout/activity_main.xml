@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +13,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -40,6 +40,7 @@
                     android:text="Sede" />
 
                 <Spinner
+                    android:id="@+id/spSede"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageView"
@@ -70,7 +71,7 @@
                         android:id="@+id/rbOcupado"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ocupado" />
+                        android:text="Desocupado" />
 
                     <RadioButton
                         android:id="@+id/rbEmpleado"
@@ -195,6 +196,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/chInformatica"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
                     android:text="Procesar" />
 
 
