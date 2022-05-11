@@ -190,14 +190,27 @@
                     android:layout_toEndOf="@+id/chArquitectura"
                     android:text="Informatica Educativa" />
 
+
+                <TextView
+                    android:id="@+id/txtPrueba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/chInformatica"
+                    android:text="texto de prueba"
+                    android:textSize="20dp"
+
+                    />
+
                 <Button
                     android:id="@+id/btnProcesar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/chInformatica"
+                    android:layout_below="@+id/txtPrueba"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Procesar" />
+                    android:text="Procesar"
+                    android:onClick="procesar"/>
 
                 <Button
                     android:id="@+id/btnMenu"

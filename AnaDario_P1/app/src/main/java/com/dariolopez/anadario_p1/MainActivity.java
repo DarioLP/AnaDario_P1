@@ -2,31 +2,43 @@ package com.dariolopez.anadario_p1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.nio.charset.Charset;
 
+
+
 public class MainActivity extends AppCompatActivity {
+Spinner sede;
+TextView textPrueba;
+
+    static int valSede[] = new int[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        sede = findViewById(R.id.spSede);
         SpinnerSede();
-
+        textPrueba = findViewById(R.id.txtPrueba);
     }
 
 
 
-
+public static class StaticValue{
+        static int position;
+        static int sedeValor[];
+}
 
 
 
@@ -37,26 +49,19 @@ private void SpinnerSede(){
     Integer[] imagenes= {R.drawable.imgazuero,R.drawable.imgbocas,R.drawable.imgveraguas,R.drawable.imgpanama,R.drawable.imgchiriqui,R.drawable.imgcocle,R.drawable.imgchorrera,R.drawable.imgcolon};
 
     ImageView imagenPortada = (ImageView) findViewById(R.id.imageView);
-    Spinner sede = (Spinner) findViewById(R.id.spSede);
 
     ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this,R.array.sede, android.R.layout.simple_spinner_item);
     sede.setAdapter(adapter);
     sede.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
             Object item = parent.getItemAtPosition(pos);
-            Toast.makeText(getApplicationContext(), "Hiciste click en " + item, Toast.LENGTH_SHORT).show();
-
-
+            //Toast.makeText(getApplicationContext(), "Hiciste click en " + item, Toast.LENGTH_SHORT).show();
             imagenPortada.setImageResource(imagenes[pos]);
-
-
-
+                StaticValue.position=pos;
         }
         public void onNothingSelected(AdapterView<?> parent) {
         }
     });
-
-
 
 
     }
@@ -66,10 +71,28 @@ private void SpinnerSede(){
 public void exitMenu(View view){
     Intent goMenu = new Intent(MainActivity.this,Menu.class);
     startActivity(goMenu);
-    this.finish();
+  //  this.finish();
 }
 
 
+public void procesar(View view){
 
 
+   // int valSede[] = new int[8];
+//    valSede[StaticValue.position]++;
+
+
+
+/*
+    String nombreSede[] = {"Azuero","Bocas", "Veraguas","Panama","Chiriqui","Cocle","Chorrera","Colon"};
+    SharedPreferences preferences=getSharedPreferences(nombreSede[StaticValue.position], Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor=preferences.edit();
+    editor.putInt(nombreSede[StaticValue.position], valSede[StaticValue.position]);
+    editor.commit();
+*/
+    valSede[StaticValue.position]=valSede[StaticValue.position]+1;
+    String resultado = String.valueOf(valSede[StaticValue.position]);
+textPrueba.setText(resultado);
+    Toast.makeText(getApplicationContext(), "Posición: "+StaticValue.position+" | Valor: "+valSede[StaticValue.position], Toast.LENGTH_SHORT).show();
+}
 }

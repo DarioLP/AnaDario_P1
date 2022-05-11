@@ -33,7 +33,7 @@ public class Menu extends AppCompatActivity {
                 this.finish();
                 break;
             case R.id.btnSalir:
-                
+
                 exitApp();
 
                 break;
