@@ -9,21 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.nio.charset.Charset;
-
+import java.text.DecimalFormat;
 
 
 public class MainActivity extends AppCompatActivity {
 Spinner sede;
 TextView textPrueba;
-
-    static int valSede[] = new int[8];
-
+RadioButton rbOcupado,rbEmpleado,rbIndependiente;
+    static int valSede[] = new int[7];
+    static int valempleo[][]= new int[7][22];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,9 @@ TextView textPrueba;
         sede = findViewById(R.id.spSede);
         SpinnerSede();
         textPrueba = findViewById(R.id.txtPrueba);
+        rbOcupado = findViewById(R.id.rbOcupado);
+        rbEmpleado = findViewById(R.id.rbEmpleado);
+        rbIndependiente = findViewById(R.id.rbIndependiente);
     }
 
 
@@ -57,7 +62,7 @@ private void SpinnerSede(){
             Object item = parent.getItemAtPosition(pos);
             //Toast.makeText(getApplicationContext(), "Hiciste click en " + item, Toast.LENGTH_SHORT).show();
             imagenPortada.setImageResource(imagenes[pos]);
-                StaticValue.position=pos;
+            StaticValue.position=pos;
         }
         public void onNothingSelected(AdapterView<?> parent) {
         }
@@ -94,5 +99,55 @@ public void procesar(View view){
     String resultado = String.valueOf(valSede[StaticValue.position]);
 textPrueba.setText(resultado);
     Toast.makeText(getApplicationContext(), "Posición: "+StaticValue.position+" | Valor: "+valSede[StaticValue.position], Toast.LENGTH_SHORT).show();
+//rbEmpleo();
+
+
+    if (rbOcupado.isChecked() == true) {
+        valempleo[StaticValue.position][1]=valempleo[StaticValue.position][1]+1;
+        Toast.makeText(getApplicationContext(), "Desocupado | Posición: "+StaticValue.position+",1 | Valor: "+valempleo[StaticValue.position][1], Toast.LENGTH_SHORT).show();
+
+    }
+        if (rbEmpleado.isChecked() == true) {
+            valempleo[StaticValue.position][2]=valempleo[StaticValue.position][2]+1;
+            Toast.makeText(getApplicationContext(), "Empleado | Posición: "+StaticValue.position+",2 | Valor: "+valempleo[StaticValue.position][2], Toast.LENGTH_SHORT).show();
+
+        }
+            if (rbIndependiente.isChecked() == true) {
+                valempleo[StaticValue.position][3]=valempleo[StaticValue.position][3]+1;
+                Toast.makeText(getApplicationContext(), "Independiente | Posición: "+StaticValue.position+",3 | Valor: "+valempleo[StaticValue.position][3], Toast.LENGTH_SHORT).show();
+
+            }
+
+
+
+
+
+
 }
+/*
+
+    public void rbEmpleo(){
+
+
+        if (rbOcupado.isChecked() == true) {
+            valempleo[StaticValue.position][1]=valempleo[StaticValue.position][1]++;
+            Toast.makeText(getApplicationContext(), "Desocupado | Posición: "+StaticValue.position+",1 | Valor: "+valempleo[StaticValue.position][1], Toast.LENGTH_SHORT).show();
+
+        } else {
+            if (rbEmpleado.isChecked() == true) {
+                valempleo[StaticValue.position][2]=valempleo[StaticValue.position][2]++;
+                Toast.makeText(getApplicationContext(), "Empleado | Posición: "+StaticValue.position+",2 | Valor: "+valempleo[StaticValue.position][2], Toast.LENGTH_SHORT).show();
+
+            } else {
+                if (rbIndependiente.isChecked() == true) {
+                    valempleo[StaticValue.position][3]=valempleo[StaticValue.position][3]++;
+                    Toast.makeText(getApplicationContext(), "Independiente | Posición: "+StaticValue.position+",3 | Valor: "+valempleo[StaticValue.position][3], Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        }
+
+
+    }*/
+
 }
