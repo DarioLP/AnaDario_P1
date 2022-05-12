@@ -31,20 +31,19 @@ public class Menu extends AppCompatActivity {
             case R.id.btnFormulario:
                 Intent goForm = new Intent(Menu.this,MainActivity.class);
                 startActivity(goForm);
-                this.finish();
-                break;
+                //this.finish();
+                break;/*
             case R.id.btnResultado:
                 Intent goResult = new Intent(Menu.this,Result.class);
                 startActivity(goResult);
-                this.finish();
-                break;
+                //this.finish();
+                break;*/
             case R.id.btnSalir:
 
                 exitApp();
 
                 break;
         }
-
 
     }
 

@@ -48,25 +48,24 @@
                     android:layout_marginTop="100dp"
                     android:text="Formulario"
                     android:onClick="OnclickButtons"/>
-
+<!--
                 <Button
                     android:id="@+id/btnResultado"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Resultados"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@+id/btnFormulario"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
                     android:onClick="OnclickButtons"
-                    />
-
+                    android:text="Resultados" />
+-->
                 <Button
                     android:id="@+id/btnSalir"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Salir"
                     android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/btnResultado"
+                    android:layout_below="@+id/btnFormulario"
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="25dp"
                     android:onClick="OnclickButtons"/>
