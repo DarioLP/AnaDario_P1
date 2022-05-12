@@ -230,11 +230,22 @@ public void procesar(View view){
     String azueroStringMaestria = String.valueOf(valGradoEstudio[0][3]);
     String azueroStringDoctorado = String.valueOf(valGradoEstudio[0][4]);
 
+    String azueroStringEspanol0 = String.valueOf(valEspanol[0][0]);
+    String azueroStringEspanol1_25 = String.valueOf(valEspanol[0][1]);
+    String azueroStringEspanol25_50 = String.valueOf(valEspanol[0][2]);
+    String azueroStringEspanol50_75 = String.valueOf(valEspanol[0][3]);
+    String azueroStringEspanol75_100 = String.valueOf(valEspanol[0][4]);
 
+    String azueroStringIngles0 = String.valueOf(valIngles[0][0]);
+    String azueroStringIngles1_25 = String.valueOf(valIngles[0][1]);
+    String azueroStringIngles25_50 = String.valueOf(valIngles[0][2]);
+    String azueroStringIngles50_75 = String.valueOf(valIngles[0][3]);
+    String azueroStringIngles75_100 = String.valueOf(valIngles[0][4]);
 
-
-
-
+    String azueroStringRedes = String.valueOf(valAreaInteres[0][0]);
+    String azueroStringArquitectura = String.valueOf(valAreaInteres[0][1]);
+    String azueroStringSoftware = String.valueOf(valAreaInteres[0][2]);
+    String azueroStringInformatica = String.valueOf(valAreaInteres[0][3]);
 
 
     Toast.makeText(this, ""+azueroString, Toast.LENGTH_SHORT).show();
@@ -251,6 +262,22 @@ public void procesar(View view){
     i.putExtra("azueroStringMaestria",azueroStringMaestria);
     i.putExtra("azueroStringDoctorado",azueroStringDoctorado);
 
+    i.putExtra("azueroStringEspanol0",azueroStringEspanol0);
+    i.putExtra("azueroStringEspanol1_25",azueroStringEspanol1_25);
+    i.putExtra("azueroStringEspanol25_50",azueroStringEspanol25_50);
+    i.putExtra("azueroStringEspanol50_75",azueroStringEspanol50_75);
+    i.putExtra("azueroStringEspanol75_100",azueroStringEspanol75_100);
+
+    i.putExtra("azueroStringIngles0",azueroStringIngles0);
+    i.putExtra("azueroStringIngles1_25",azueroStringIngles1_25);
+    i.putExtra("azueroStringIngles25_50",azueroStringIngles25_50);
+    i.putExtra("azueroStringIngles50_75",azueroStringIngles50_75);
+    i.putExtra("azueroStringIngles75_100",azueroStringIngles75_100);
+
+    i.putExtra("azueroStringRedes",azueroStringRedes);
+    i.putExtra("azueroStringArquitectura",azueroStringArquitectura);
+    i.putExtra("azueroStringSoftware",azueroStringSoftware);
+    i.putExtra("azueroStringInformatica",azueroStringInformatica);
 
     startActivity(i);
 }
