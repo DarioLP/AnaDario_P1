@@ -16,151 +16,403 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Azuero"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSedeAzuero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sede Azuero: "
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/txtValSedeAzuero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+<!-- Inicio de estado empleado de la sede Azuero-->
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Estado de Empleado" />
+                android:textStyle="bold"
+                android:text="Estado de Empleo" />
 
-            <TextView
-                android:id="@+id/textView3"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Desocupado: " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView4"
+                <TextView
+                    android:id="@+id/txtAzueroDesocupado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desocupado: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroDesocupado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Empleado: " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView5"
+                <TextView
+                    android:id="@+id/txtAzueroEmpleado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Empleado: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroEmpleado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Independiente: " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/txtAzueroIndependiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Independiente: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroIndependiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+<!-- Final de estado empleado de la sede Azuero-->
+
+<!-- Inicio de Grado de estudio de la sede Azuero-->
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grado de estudio" />
+                android:text="Grado de estudio"
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/textView7"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Técnico" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Licenciatura" />
+                <TextView
+                    android:id="@+id/txtAzueroTecnico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Técnico: " />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Postgrado: " />
+                <TextView
+                    android:id="@+id/txtValAzueroTecnico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView10"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestria: " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView11"
+                <TextView
+                    android:id="@+id/txtAzueroLicenciatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Empleado: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroLicenciatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Doctorado: " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzueroPostgrado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Postgrado: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroPostgrado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzueroMaestria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maestria: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroMaestria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzueroDoctorado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctorado: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroDoctorado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+
+<!--Final de Grado de estudio de la sede Azuero-->
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Idioma" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Español" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0%" />
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1-25%" />
 
-            <TextView
-                android:id="@+id/textView16"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="25-50% " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="50-75% " />
+                <TextView
+                    android:id="@+id/txtAzuero0Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%: " />
 
-            <TextView
-                android:id="@+id/textView18"
+                <TextView
+                    android:id="@+id/txtValAzuero0Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" 75-100%" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero1_25Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-25%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero1_25Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero25_50Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25-50%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero25_50Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero50_75Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50-75%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero50_75Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero75_100Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75-100%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero75_100Espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Ingles" />
 
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0%" />
 
-            <TextView
-                android:id="@+id/textView21"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1-25%" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="25-50% " />
+                <TextView
+                    android:id="@+id/txtAzuero0Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%: " />
 
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="50-75% " />
+                <TextView
+                    android:id="@+id/txtValAzuero0Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView24"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" 75-100%" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero1_25Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-25%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero1_25Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero25_50Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25-50%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero25_50Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero50_75Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50-75%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero50_75Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzuero75_100Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75-100%: " />
+
+                <TextView
+                    android:id="@+id/txtValAzuero75_100Ingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/textView25"
@@ -168,30 +420,79 @@
                 android:layout_height="wrap_content"
                 android:text="Areas de interes" />
 
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Redes" />
 
-            <TextView
-                android:id="@+id/textView27"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Arquitectura" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView28"
+                <TextView
+                    android:id="@+id/txtAzueroRedes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redes: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroRedes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Software " />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView29"
+                <TextView
+                    android:id="@+id/txtAzueroArquitectura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arquitectura: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroArquitectura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="informatica Educativa" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/txtAzueroSoftware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Software: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroSoftware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAzueroInformatica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informatica Educativa: " />
+
+                <TextView
+                    android:id="@+id/txtValAzueroInformatica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+            
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

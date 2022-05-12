@@ -174,15 +174,15 @@ public void procesar(View view){
 
 
     if (rbOcupado.isChecked() == true) {
-        valempleo[StaticValue.position][1]=valempleo[StaticValue.position][1]+1;
+        valempleo[StaticValue.position][0]=valempleo[StaticValue.position][0]+1;
        // Toast.makeText(getApplicationContext(), "Desocupado | Posición: "+StaticValue.position+",1 | Valor: "+valempleo[StaticValue.position][1], Toast.LENGTH_SHORT).show();
     }
     if (rbEmpleado.isChecked() == true) {
-        valempleo[StaticValue.position][2]=valempleo[StaticValue.position][2]+1;
+        valempleo[StaticValue.position][1]=valempleo[StaticValue.position][1]+1;
         //Toast.makeText(getApplicationContext(), "Empleado | Posición: "+StaticValue.position+",2 | Valor: "+valempleo[StaticValue.position][2], Toast.LENGTH_SHORT).show();
     }
     if (rbIndependiente.isChecked() == true) {
-        valempleo[StaticValue.position][3]=valempleo[StaticValue.position][3]+1;
+        valempleo[StaticValue.position][2]=valempleo[StaticValue.position][2]+1;
         //Toast.makeText(getApplicationContext(), "Independiente | Posición: "+StaticValue.position+",3 | Valor: "+valempleo[StaticValue.position][3], Toast.LENGTH_SHORT).show();
     }
 
@@ -199,25 +199,60 @@ public void procesar(View view){
 
     if (chRedes.isChecked()){
         valAreaInteres[StaticValue.position][0]++;
-        Toast.makeText(getApplicationContext(), "Redes | Posición: "+StaticValue.position+",0 | "+valAreaInteres[StaticValue.position][0], Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(), "Redes | Posición: "+StaticValue.position+",0 | "+valAreaInteres[StaticValue.position][0], Toast.LENGTH_SHORT).show();
     }
 
     if (chArquitectura.isChecked()){
         valAreaInteres[StaticValue.position][1]++;
-        Toast.makeText(getApplicationContext(), "Arquitectura | Posición: "+StaticValue.position+",1 | "+valAreaInteres[StaticValue.position][1], Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Arquitectura | Posición: "+StaticValue.position+",1 | "+valAreaInteres[StaticValue.position][1], Toast.LENGTH_SHORT).show();
     }
 
     if (chSoftware.isChecked()){
         valAreaInteres[StaticValue.position][2]++;
-        Toast.makeText(getApplicationContext(), "Software | Posición: "+StaticValue.position+",2 | "+valAreaInteres[StaticValue.position][2], Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Software | Posición: "+StaticValue.position+",2 | "+valAreaInteres[StaticValue.position][2], Toast.LENGTH_SHORT).show();
     }
 
     if (chInformatica.isChecked()){
         valAreaInteres[StaticValue.position][3]++;
-        Toast.makeText(getApplicationContext(), "Informatica educativa | Posición: "+StaticValue.position+",3 | "+valAreaInteres[StaticValue.position][3], Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Informatica educativa | Posición: "+StaticValue.position+",3 | "+valAreaInteres[StaticValue.position][3], Toast.LENGTH_SHORT).show();
     }
 
 
+
+    String azueroString = String.valueOf(valSede[0]);
+    String azueroStringDesocupado = String.valueOf(valempleo[0][0]);
+    String azueroStringEmpleado = String.valueOf(valempleo[0][1]);
+    String azueroStringIndependiente = String.valueOf(valempleo[0][2]);
+
+    String azueroStringTecnico = String.valueOf(valGradoEstudio[0][0]);
+    String azueroStringLicenciatura = String.valueOf(valGradoEstudio[0][1]);
+    String azueroStringPostgrado = String.valueOf(valGradoEstudio[0][2]);
+    String azueroStringMaestria = String.valueOf(valGradoEstudio[0][3]);
+    String azueroStringDoctorado = String.valueOf(valGradoEstudio[0][4]);
+
+
+
+
+
+
+
+
+    Toast.makeText(this, ""+azueroString, Toast.LENGTH_SHORT).show();
+
+    Intent i = new Intent(MainActivity.this,Result.class);
+    i.putExtra("azueroString",azueroString);
+    i.putExtra("azueroStringDesocupado",azueroStringDesocupado);
+    i.putExtra("azueroStringEmpleado",azueroStringEmpleado);
+    i.putExtra("azueroStringIndependiente",azueroStringIndependiente);
+
+    i.putExtra("azueroStringTecnico",azueroStringTecnico);
+    i.putExtra("azueroStringLicenciatura",azueroStringLicenciatura);
+    i.putExtra("azueroStringPostgrado",azueroStringPostgrado);
+    i.putExtra("azueroStringMaestria",azueroStringMaestria);
+    i.putExtra("azueroStringDoctorado",azueroStringDoctorado);
+
+
+    startActivity(i);
 }
 /*
 

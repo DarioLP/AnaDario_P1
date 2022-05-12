@@ -8,14 +8,20 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
+
+
+   // TextView txtSede;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
+     //   recibirDatos();
     }
 
 
@@ -64,4 +70,13 @@ public class Menu extends AppCompatActivity {
                 titulo.show();
 
     }
+
+/*
+    public void recibirDatos(){
+        Bundle extras = getIntent().getExtras();
+        String sede = extras.getString("sede");
+        txtSede = (TextView) findViewById(R.id.txtSede);
+        txtSede.setText(sede);
+    }
+*/
 }

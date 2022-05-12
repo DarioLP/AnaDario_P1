@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnaDario_P1">
-        <activity
-            android:name=".Result"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Result"
+            android:exported="false" />
+
         <activity
             android:name=".Menu"
             android:exported="true">
