@@ -26,12 +26,12 @@ Spinner sede, gradoEstudio, spEspanol,spIngles;
 TextView textPrueba;
 RadioButton rbOcupado,rbEmpleado,rbIndependiente;
 CheckBox chRedes,chSoftware,chArquitectura,chInformatica;
-    static int valSede[] = new int[7];
-    static int valempleo[][]= new int[7][22];
-    static int valGradoEstudio[][] = new int[7][5];
-    static int valEspanol[][] = new int[7][5];
-    static int valIngles[][] = new int[7][5];
-    static int valAreaInteres[][] = new int[7][5];
+    static int valSede[] = new int[8];
+    static int valempleo[][]= new int[8][22];
+    static int valGradoEstudio[][] = new int[8][5];
+    static int valEspanol[][] = new int[8][5];
+    static int valIngles[][] = new int[8][5];
+    static int valAreaInteres[][] = new int[8][5];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -399,6 +399,7 @@ public void procesar(View view){
     i.putExtra("veraguasStringArquitectura",veraguasStringArquitectura);
     i.putExtra("veraguasStringSoftware",veraguasStringSoftware);
     i.putExtra("veraguasStringInformatica",veraguasStringInformatica);
+
 
     //panama
 

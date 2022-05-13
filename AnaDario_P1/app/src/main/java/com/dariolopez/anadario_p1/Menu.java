@@ -40,8 +40,8 @@ public class Menu extends AppCompatActivity {
                 break;*/
             case R.id.btnSalir:
 
-                exitApp();
-
+              //  exitApp();
+ this.finishAffinity();
                 break;
         }
 
