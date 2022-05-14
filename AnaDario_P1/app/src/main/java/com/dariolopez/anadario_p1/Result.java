@@ -81,7 +81,7 @@ recibirDatos();
 
             String azueroValString = extras.getString("azueroString");
 
-            //Datos De epmpleo de sede Azuero
+            //Datos de sede Azuero
             String azueroValStringDesocupado = extras.getString("azueroStringDesocupado");
             String azueroValStringEmpleado = extras.getString("azueroStringEmpleado");
             String azueroValStringIndependiente = extras.getString("azueroStringIndependiente");
@@ -192,7 +192,7 @@ recibirDatos();
             txtValSedeAzueroInformatica.setText(azueroValStringInformatica);
 
 
-            //Datos De epmpleo de sede Bocas
+            //Datos de sede Bocas
 
             String BocasValString = extras.getString("BocasString");
 
@@ -307,7 +307,7 @@ recibirDatos();
             txtValSedeBocasInformatica.setText(BocasValStringInformatica);
 
 
-            //Datos De epmpleo de sede veraguas
+            //Datos de sede veraguas
 
             String veraguasValString = extras.getString("veraguasString");
 
@@ -423,7 +423,7 @@ recibirDatos();
 
 
 
-            //Datos De epmpleo de sede panama
+            //Datos de sede panama
 
             String panamaValString = extras.getString("panamaString");
 
@@ -539,7 +539,7 @@ recibirDatos();
 
 
 
-            //Datos De epmpleo de sede chiriqui
+            //Datos de sede chiriqui
 
             String chiriquiValString = extras.getString("chiriquiString");
 
@@ -655,7 +655,7 @@ recibirDatos();
 
 
 
-            //Datos De epmpleo de sede cocle
+            //Datos de sede cocle
 
             String cocleValString = extras.getString("cocleString");
 
@@ -770,7 +770,7 @@ recibirDatos();
             txtValSedecocleInformatica.setText(cocleValStringInformatica);
 
 
-            //Datos De epmpleo de sede chorrera
+            //Datos de sede chorrera
 
             String chorreraValString = extras.getString("chorreraString");
 
@@ -885,7 +885,7 @@ recibirDatos();
             txtValSedechorreraInformatica.setText(chorreraValStringInformatica);
 
 
-            //Datos De epmpleo de sede colon
+            //Datos de sede colon
 
             String colonValString = extras.getString("colonString");
 

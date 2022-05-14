@@ -12,16 +12,10 @@ import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
 
-
-   // TextView txtSede;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
-
-     //   recibirDatos();
     }
 
 
@@ -31,17 +25,11 @@ public class Menu extends AppCompatActivity {
             case R.id.btnFormulario:
                 Intent goForm = new Intent(Menu.this,MainActivity.class);
                 startActivity(goForm);
-                //this.finish();
-                break;/*
-            case R.id.btnResultado:
-                Intent goResult = new Intent(Menu.this,Result.class);
-                startActivity(goResult);
-                //this.finish();
-                break;*/
+                break;
+
             case R.id.btnSalir:
 
-              //  exitApp();
- this.finishAffinity();
+                exitApp();
                 break;
         }
 
@@ -55,7 +43,8 @@ public class Menu extends AppCompatActivity {
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
+                        //finish();
+                        finishAffinity();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -70,12 +59,4 @@ public class Menu extends AppCompatActivity {
 
     }
 
-/*
-    public void recibirDatos(){
-        Bundle extras = getIntent().getExtras();
-        String sede = extras.getString("sede");
-        txtSede = (TextView) findViewById(R.id.txtSede);
-        txtSede.setText(sede);
-    }
-*/
 }
